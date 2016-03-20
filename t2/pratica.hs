@@ -67,7 +67,7 @@ idade id = filter (>1970)  (map (\x -> 2016 - x) id)
 pares :: [Int] -> [Int]
 pares par = filter (\x -> mod x 2==0) par
 
--- 10 verifique se o caracter (primeiro argumento) está contido na string (segundo argumento).
+-- 10 verifique se o caracter (primeiro argumento) está contido na string (segundo argumento). 
 
 charFound :: Char -> String -> Bool
 charFound x y
