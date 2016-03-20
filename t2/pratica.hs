@@ -48,8 +48,7 @@ calc num = map (\x -> 3*(x^2) + (2/x) + 1) num
 nega :: [Float] -> [Float]
 nega neg = filter(<0) neg
 
--- 7 receba uma lista de números e retorne somente os que estiverem
--- entre 1 e 100, inclusive. 
+-- 7 receba uma lista de números e retorne somente os que estiverem entre 1 e 100, inclusive. 
 -- Dica 1: use uma função anônima. 
 -- Dica 2: use o operador '&&' para expressar um 'E' lógico.
 
@@ -62,3 +61,28 @@ entre list = filter(\x -> x>=1 && x<=100) list
 
 idade :: [Int] -> [Int]
 idade id = filter (>1970)  (map (\x -> 2016 - x) id)
+
+-- 9 lista de números e retorne somente aqueles que forem pares
+
+pares :: [Int] -> [Int]
+pares par = filter (\x -> mod x 2==0) par
+
+-- 10 verifique se o caracter (primeiro argumento) está contido na string (segundo argumento).
+
+charFound :: Char -> String -> Bool
+charFound x y
+ | y == [] = False
+ | x == head y = True
+ | x /= head y = charFound x (tail y)
+
+-- 11 recebe uma função condicional e uma lista, retornando o "menor prefixo"
+--takeWhile :: (a -> Bool) -> [a] -> [a]
+
+-- takeWhile (\x -> x/2 <10) [0,1,2,5,10,15,16,17,18,19,20,21,100]
+-- [0.0,1.0,2.0,5.0,10.0,15.0,16.0,17.0,18.0,19.0]
+
+
+-- 12 lista de nomes e retorne outra lista com somente aqueles nomes que terminarem com a letra 'a'.
+
+nomes :: [String] -> [String]
+nomes nome = filter(\x -> last x == 'a') nome
