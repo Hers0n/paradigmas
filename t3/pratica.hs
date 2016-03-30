@@ -30,7 +30,7 @@ semVogais str = filter(\x -> x /= 'a' && x /= 'A' && x /= 'e' && x /= 'E' && x /
 -- 7
 semVogaisR :: String -> String
 semVogaisR "" = ""
-semVogaisR (x:xs) = if (x /= 'a' && x /= 'A' && x /= 'e' && x /= 'E' && x /= 'i' && x /= 'I' && x /= 'o' && x /= 'O' && x /= 'u' && x /= 'U') then x : semVogaisR xs else semVogaisR xs
+semVogaisR (x:xs) = if x /= 'a' && x /= 'A' && x /= 'e' && x /= 'E' && x /= 'i' && x /= 'I' && x /= 'o' && x /= 'O' && x /= 'u' && x /= 'U' then x : semVogaisR xs else semVogaisR xs
 
 -- 8 
 codifica :: String -> String
