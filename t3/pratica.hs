@@ -21,7 +21,7 @@ calc (x:xs) = ( 3*(x^2)+(2/x)+1 ) : calc xs
 -- 5
 neg :: [Float] -> [Float]
 neg [] = []
-neg (x:xs) = if(x<0) then x : neg xs else neg xs
+neg (x:xs) = if x < 0 then x : neg xs else neg xs
 
 -- 6
 semVogais :: String -> String
@@ -30,11 +30,11 @@ semVogais str = filter(\x -> x /= 'a' && x /= 'A' && x /= 'e' && x /= 'E' && x /
 -- 7
 semVogaisR :: String -> String
 semVogaisR "" = ""
-semVogaisR (x:xs) = if (x /= 'a' && x /= 'A' && x /= 'e' && x /= 'E' && x /= 'i' && x /= 'I' && x /= 'o' && x /= 'O' && x /= 'u' && x /= 'U') then x : semVogaisR xs else semVogaisR xs
+semVogaisR (x:xs) = if x /= 'a' && x /= 'A' && x /= 'e' && x /= 'E' && x /= 'i' && x /= 'I' && x /= 'o' && x /= 'O' && x /= 'u' && x /= 'U' then x : semVogaisR xs else semVogaisR xs
 
 -- 8 
 codifica :: String -> String
-codifica str = map(\x -> if (x == ' ') then ' ' else '-') str
+codifica str = map(\x -> if x == ' ' then ' ' else '-') str
 
 -- 9
 codificaR :: String -> String
@@ -44,7 +44,7 @@ codificaR (x:xs) = if x == ' ' then ' ' : codificaR xs else '-' : codificaR xs
 -- 10
 charFound :: Char -> String -> Bool
 charFound _ "" = False
-charFound k (x:xs) = if(k==x) then True else charFound k xs
+charFound k (x:xs) = if k == x then True else charFound k xs
 
 -- 11
 translate :: [(Float, Float)] -> [(Float, Float)]
