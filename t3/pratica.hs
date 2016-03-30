@@ -11,7 +11,7 @@ sr (x:xs) =  ("Sr. "++) x : sr xs
 -- 3 
 espacos :: String -> Int
 espacos [] = 0
-espacos (x:xs) = ( if(x == ' ') then 1 else 0 ) + espacos xs
+espacos (x:xs) = ( if x == ' ' then 1 else 0 ) + espacos xs
 
 -- 4
 calc :: [Float] -> [Float]
