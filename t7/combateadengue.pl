@@ -56,13 +56,13 @@ delete(X, [H|T], [H|NT]) :- delete(X, T, NT).
 
 % regras combinadas
 visitar(E) :- E = [_,_,_,_,_,_,_],
-    	Casas = [f, g, h, l, m, p, t],
-    		perm(Casas, E),
-    			regra1(E),
+		Casas = [f, g, h, l, m, p, t],
+			perm(Casas, E),
+				regra1(E),
 				regra2(E),
-    			regra3(E),
-    			regra4(E),
-    			regra5(E).
+				regra3(E),
+				regra4(E),
+				regra5(E).
 
 /*
 # Questão 1. #
@@ -74,7 +74,7 @@ visitar([l,t,f,h,g,m,p]). -> false.
 visitar([m,f,d,h,l,g,t]). -> false.
 visitar([m,l,h,g,f,p,t]). -> false.
 
-Resposta: (B) H, G, F, L, T, P e M.
+	Resposta: (B) H, G, F, L, T, P e M.
 
 
 # Questão 2. #
@@ -102,7 +102,7 @@ visitar([_,_,g,_,t,l,f]). -> false.
 visitar([_,_,_,g,t,l,f]). -> false.
 visitar([_,_,_,g,t,l,f]). -> false.
 
-Resposta: (D) Quinta.
+	Resposta: (D) Quinta.
 
 
 # Questão 3. #
@@ -110,7 +110,7 @@ Se a casa H é a primeira a ser visitada, qual a quarta casa a ser visitada?
 
 visitar([h,_,_,X,_,_,_]). -> X = l .
 
-Resposta: (C) L.
+	Resposta: (C) L.
 
 
 # Questão 4. #
@@ -122,7 +122,7 @@ visitar([_,_,h,_,_,p,_]). -> true.
 visitar([_,_,_,h,_,p,_]). -> true.
 visitar([_,_,_,_,h,p,_]). -> false.
 
-Resposta: (E) Quinta.
+	Resposta: (E) Quinta.
 
 
 # Questão 5. #
@@ -134,6 +134,7 @@ visitar([_,_,f,X,p,_,_]). -> false.
 visitar([_,_,_,f,X,p,_]). -> false.
 visitar([_,_,_,_,f,X,p]). -> false.
 
-Resposta: (E) L e T.
+	Resposta: (E) L e T.
+
 
 */
